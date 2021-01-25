@@ -8,12 +8,12 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    router.push(`/?query=${event.target['query'].value}`)
+    router.push(`/?q=${event.target['query'].value}`)
   }
 
   return (
     <ChakraProvider>
-      <Stack>
+      <Stack backgroundColor="gray.50" height="100%" minHeight="100vh">
         <Stack backgroundColor="yellow.400" direction="row" padding={4} spacing={6}>
           <div style={{ width: 40 }}>
             <Image src="/logo.png" />
