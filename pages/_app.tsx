@@ -1,11 +1,14 @@
 import React from 'react'
 import { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
 import { ChakraProvider, Stack, Image, Input, IconButton } from '@chakra-ui/react'
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
+  const router = useRouter()
+
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(event.target["query"].value)
+    router.push(`/?query=${event.target['query'].value}`)
   }
 
   return (
