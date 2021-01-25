@@ -1,4 +1,4 @@
-export interface RawProduct {
+export interface RawProductSearch {
   id: string;
   title: string;
   price: number;
@@ -8,6 +8,18 @@ export interface RawProduct {
   }
 }
 
-export interface MercadoLibreResponse {
-  results: RawProduct[];
+export interface RawProduct {
+  id: string;
+  title: string;
+  price: number;
+  thumbnail: string;
+  seller_address: {
+    state: {
+      name: string;
+    }
+  }
+}
+
+export interface MercadoLibreSearchResponse {
+  results: RawProductSearch[];
 }
