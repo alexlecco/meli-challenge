@@ -33,7 +33,7 @@ const IndexPage: React.FC<Props> = ({ results }) => {
                     />
                     <Stack>
                       <Text fontSize={{ base: "2xl", lg: "lg", xl: "sm" }} fontWeight={500}>
-                        {product.price.toLocaleString("es-Ar", { style: "currency", currency: "EUR" })}
+                        {product.price.toLocaleString("es-Ar", { style: "currency", currency: "ARS" })}
                       </Text>
                       <Text>{product.title}</Text>
                     </Stack>
